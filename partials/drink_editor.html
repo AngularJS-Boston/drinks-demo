@@ -1,0 +1,50 @@
+<div class="form_content">
+    <form>
+        <div class="controlbar">
+            <h3 class="title">{{pageTitle}}</h3>
+            <div class="edit_controls">
+                <input type="submit" id="submit" ng-click="DrinkSave( drinks )" value="Save">
+                <input type="submit" id="delete" ng-click="DrinkDelete( drinks )" value="Delete">
+                <input type="submit" id="cancel" ng-click="GoHome()" value="Cancel">
+            </div>
+        </div>
+        <div>
+            <label>Name</label><input id="name" type="text" style="width: 300px;" ng-model="drink.name" required />
+        </div>
+        <div>
+            <label>Description</label><textarea style="height: 80px; width: 300px;">{{drink.description}}</textarea>
+        </div>
+        <div>
+            <label>Instructions</label><textarea style="height: 80px; width: 300px;">{{drink.instructions}}</textarea>
+        </div>
+    </form>
+    <form>
+        <div class="scrollable" id="add_ingredients" style="clear:both;">
+        <h4>Ingredients</h4>
+        <table class="table table-bordered table-condensed table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Amount</th>
+                    <th>Ingredient</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="list" ng-repeat="ingredient in drink.ingredients">
+                    <td><input type="text" id="amount" ng-model="ingredient.amount"></td>
+                    <td><input type="text" id="ingredient" ng-model="ingredient.ingredient"></td>
+                    <td><input type="submit" ng-click="IngredientDelete(ingredient)" value="Delete"></td>
+                </tr>
+                <tr class="list">
+                    <td><input type="text" id="amount" ng-model="ingredient_new.amount"></td>
+                    <td><input type="text" id="ingredient" ng-model="ingredient_new.ingredient"></td>
+                    <td rowspan="2"><input type="submit" ng-click="IngredientSave( ingredient_new )" value="Add"></td>
+                </tr>
+            </tbody>
+            <tfoot>
+            </tfoot>
+        </table>
+        </div>
+    </form>
+</div>
+
+<pre>{{drink}}</pre>

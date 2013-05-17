@@ -1,0 +1,35 @@
+#main_container {
+    margin-top:50px;
+}
+.controlbar {
+    width:100%;
+    display:inline-block;
+    clear;
+}
+.controlbar .title {
+    float:left;
+    position:relative;
+}
+.controlbar .edit_controls {
+    float:right;
+    position:relative;
+    padding-top:15px;
+}
+.hide {
+    display: none;
+}
+.items_per_page {
+    padding-right:15px;
+}
+.items_per_page select {
+    margin-left:10px;
+    width: 50px;
+}
+.picture {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+label {
+    font-weight: bold;
+}

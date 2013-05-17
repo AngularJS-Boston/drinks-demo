@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="drinks-app">
+    <head>
+        <title>Drinks</title>
+
+        <link rel="stylesheet" href="components/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="app.css">
+
+        <!-- core scripts -->
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js"></script>
+
+
+        <!-- app scripts -->
+        <script src="js/services.js"></script>
+        <script src="js/controllers.js"></script>
+        <script src="js/directives.js"></script>
+        <script src="js/app.js"></script>
+
+    </head>
+    <body>
+        <ng:include src="'partials/top_nav.html'"></ng:include>
+        <div id="main_container" class="container-fluid">
+            <div class="row-fluid">
+                <div id="left_nav" class="span3">
+                    <div class="well sidebar-nav">
+                        <ul class="nav nav-list">
+                            <li class="nav-header">DRINKS</li>
+                                <li class=""><a href="/drinks-demo/#/drinks/"><i class="icon-chevron-right"></i>Drinks List</a></li>
+                                <li class=""><a href="/drinks-demo/#/drinks/0"><i class="icon-chevron-right"></i>New Drink</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="main" class="span9">
+                    <div ng-view></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
